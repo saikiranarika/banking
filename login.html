@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Banking App</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">SBI Online Banking</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" ><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#login"class="active">Login</a></li>
+                <li><a href="#balance">Check Balance</a></li>
+                <li><a href="#transactions">Transactions</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-phone"></i>Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="container1" id="login-section">
+    <h2 class="logo"><i class="fa-solid fa-user"></i>Login</h2>
+    <div class="section">
+        <input type="text" id="login-id" placeholder="Enter Login ID">
+        <input type="password" id="login-pin" placeholder="Enter PIN">
+        <button onclick="login()">Login</button>
+        <p id="login-message" style="color: red;"></p>
+    </div>
+</div>
+
+<div class="container" id="bank-dashboard">
+    <h2>Banking Dashboard</h2>
+    
+    <!-- Account Overview -->
+<center>
+        <div class="section1" id="account-overview">
+           <h3>Account Overview</h3>
+            <p><strong>Account Holder:</strong> <span id="account-name">Saikiran arika</span></p>
+            <p><strong>Account Number:</strong> <span id="account-number">123456789012</span></p>
+            <p><strong>IFSC Code:</strong> <span id="ifsc-code">ABC1234567</span></p>
+            <p><strong>Current Balance:</strong> <span id="balance" class="hidden-balance" onclick="promptForBalance()">****</span></p>
+        </div>
+</center>
+        <!-- Debit Section -->
+        <div class="d">
+            <div class="section1" id="debit-section">
+                <center>
+                <h3>Debit Section</h3>
+                </center>
+                <input type="number" id="debit-amount" placeholder="Enter debit amount">
+                <input type="password" id="transaction-pin" placeholder="Enter your PIN to Debit">
+                <button onclick="promptPinForDebit()">Debit</button>
+            </div>
+            <!-- Credit Section -->
+            <div class="section1" id="credit-section">
+                <center>
+                <h3>Credit Section</h3>
+                </center>
+                <input type="number" id="credit-amount" placeholder="Enter credit amount">
+                <input type="password" id="credit-pin" placeholder="Enter your PIN to Credit">
+                <button onclick="promptPinForCredit()">Credit</button>
+            </div>
+        </div>
+    
+        <!-- Messages -->
+        <div class="section">
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
