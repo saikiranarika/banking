@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Banking App</title>
     <style>
-        
+        h3:hover{
+            color: rgb(47, 158, 255);
+            text-shadow: 0px 1px 10px rgb(190, 25, 255);
+
+        }
     </style>
+    <title>Banking App</title>
 </head>
 <body>
     <header>
-        <h1 class="fade-in">SBI Online Banking</h1>
+        <h1 class="fade-in">Sebi National Banking</h1>
         <nav>
             <ul>
                 <li><a href="index.html" ><i class="fa-solid fa-house"></i>Home</a></li>
                 <li><a href="#login"class="active">Login</a></li>
-                <li><a href="#balance">Check Balance</a></li>
-                <li><a href="#transactions">Transactions</a></li>
+                <!-- <li><a href="#balance">Check Balanc</a></li> -->
+                <!-- <li><a href="#transactions">Transactions</a></li> -->
                 <li><a href="#contact"><i class="fa-solid fa-phone"></i>Contact Us</a></li>
             </ul>
         </nav>
@@ -27,8 +31,8 @@
 <div class="container1" id="login-section">
     <h2 class="logo"><i class="fa-solid fa-user"></i>Login</h2>
     <div class="section">
-        <input type="text" id="login-id" placeholder="Enter Login ID">
-        <input type="password" id="login-pin" placeholder="Enter PIN">
+        <input type="text" id="login-id" placeholder="Enter Login ID : kiran" required>
+        <input type="password" id="login-pin" placeholder="Enter PIN :1234" required>
         <button onclick="login()">Login</button>
         <p id="login-message" style="color: red;"></p>
     </div>
